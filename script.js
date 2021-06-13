@@ -1,31 +1,13 @@
-
-var principal = document.getElementById("principal").value;
-
-var rate = document.getElementById("rate").value;
-
-var years = document.getElementById("years").value;
-
-var interest = principal * years * rate / 100;
-
-var year = new Date().getFullYear() + parseInt(years);
-
-
-function updateRate(){
-    var rateval = document.getElementById("rate").value;
-    document.getElementById("rate_val").innerText=rateval;
-}
-
-
-function computeInterest()
+function compute()
 {
-    // if(principal < 0){
-    //     alert("Enter a positive number");
-    // } else{
-    //     alert(result);
-    // }
+    var principal = document.getElementById("principal").value;
 
-    document.getElementById("result").innerHTML="If you deposit " + principal + ",\<br\> at an interest rate of " + rate + "%\<br\>You will recieve an amount of " + amount + ",\<br\>in the year " + year + "\<br\>"; 
+    var noOfYears = document.getElementById("noOfYears").value;
+
+    var rate = document.getElementById("rate").value;
+
+    var result = document.getElementById("result");
+
+    result.innerHTML = "If you deposit " + principal + ", at an interest rate of " + rate + "% You will recieve an amount of " + (principal*noOfYears*rate/100);
     
 }
-
-computeInterest();

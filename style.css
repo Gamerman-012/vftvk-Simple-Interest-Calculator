@@ -13,8 +13,12 @@ h1{
     background-color: white;
     color: black;
     width: 300px;
+    margin: 200px 580px;
     padding: 20px;
     border-radius: 25px;
     align-items: center;
 }
  
+footer {
+    text-align: center;
+}
